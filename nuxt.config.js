@@ -31,10 +31,20 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
+  },
+
+  // loading: '~/components/Loader.vue',
+
   /*
   ** Global CSS
   */
   css: [
+    'normalize.css/normalize.css',
+    '@/assets/transitions.styl'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -56,7 +66,20 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/markdownit',
+    '@nuxtjs/style-resources'
   ],
+
+  styleResources: {
+    stylus: [
+      '~/assets/definitions.styl'
+    ]
+  },
+
+  markdownit: {
+    injected: true
+  },
+
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
