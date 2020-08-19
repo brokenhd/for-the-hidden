@@ -26,12 +26,7 @@ module.exports.forGenerate = () => {
     })
   ]).then(([articles, towers]) => {
     routes.push(...articles.items.map(entry => "/articles/" + entry.fields.slug))
-    routes.push(...towers.items.map(entry =>  {
-      if (entry.fields.slug == "home") {
-        return
-      }
-      return "/" + entry.fields.slug
-    }))
+    routes.push(...towers.items.map(entry => "/" + entry.fields.slug))
     return routes
   }).catch(console.error)
 
