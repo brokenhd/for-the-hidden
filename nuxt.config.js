@@ -1,5 +1,9 @@
 const config = require('./.contentful.json')
 
+// Requirements for static site generation
+const generating = process.env.npm_lifecycle_event == 'generate'
+const forGenerate = require('./build/routes').forGenerate
+
 export default {
   /*
   ** Nuxt rendering mode
@@ -78,6 +82,11 @@ export default {
 
   markdownit: {
     injected: true
+  },
+
+  generate: {
+    routes: forGenerate,
+    fallback: !generating
   },
 
   /*

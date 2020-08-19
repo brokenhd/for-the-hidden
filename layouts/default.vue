@@ -3,15 +3,18 @@
   .layout
     site-header
     nuxt
+    site-footer
 
 </template>
 
 <script>
 import SiteHeader from '~/components/Header'
+import SiteFooter from '~/components/Footer'
 
 export default {
   components: {
-    SiteHeader
+    SiteHeader,
+    SiteFooter
   }
 }
 </script>

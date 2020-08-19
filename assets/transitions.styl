@@ -1,7 +1,15 @@
-.page-enter-active,
-.page-leave-active
+.page-enter-active, .page-leave-active
   transition opacity 0.3s
-
-.page-enter,
-.page-leave-to
+.page-enter, .page-leave-to
   opacity 0
+
+.fade-enter-active, .fade-leave-active
+  transition opacity 0.3s
+.fade-enter, .fade-leave-to
+  opacity 0
+
+.slide-in-from-right-enter-active, .slide-in-from-right-leave-active
+  transition opacity 0.3s, transform 0.3s ease-in-out
+.slide-in-from-right-enter, .slide-in-from-right-leave-to
+  opacity 0
+  transform translateX(100%)

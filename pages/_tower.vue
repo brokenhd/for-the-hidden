@@ -2,9 +2,11 @@
 
 <template lang='pug'>
 
-.tower
-  h1 {{ tower.title }}
-  .wysiwyg(v-html='body')
+.tower.max-w
+  h1(v-if='tower.title') {{ tower.title }}
+  .wysiwyg(
+    v-if='body'
+    v-html='body')
 
 </template>
 
